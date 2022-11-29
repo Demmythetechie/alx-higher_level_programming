@@ -8,3 +8,4 @@ task 6: This py script prints welcome to Holberton school!
 task 7: This py script assigns some certain characters in word into some variables
 task 8: This py script printed some selected  word from the intial intialization of str
 task 9: This py script prints The Zen of Python, by Tim Peters
+task 11: This program prints a string using write to stdder with import sys
