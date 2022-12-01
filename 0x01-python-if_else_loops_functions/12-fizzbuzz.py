@@ -12,4 +12,5 @@ def fizzbuzz():
         if (mul == 99):
             pass
         else:
-            print(" ")
+            print(" ", end='')
+print("")
