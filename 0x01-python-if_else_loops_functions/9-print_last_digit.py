@@ -3,7 +3,7 @@ def print_last_digit(number):
 
     if number < 0:
         last_f = str(number)
-        last_s = '-' + last_f[-1]
+        last_s = last_f[-1]
         last = int(last_s)
         print(last, end='')
         return last
