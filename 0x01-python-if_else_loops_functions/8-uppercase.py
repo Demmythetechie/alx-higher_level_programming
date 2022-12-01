@@ -14,4 +14,4 @@ def uppercase(str):
 
         elif ind == len(str) + 1:
 
-            print("{}".format(chr(value)))
+            print("")
