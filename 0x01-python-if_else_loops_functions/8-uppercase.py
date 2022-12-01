@@ -3,9 +3,16 @@ def uppercase(str):
     for ind in range(len(str)):
 
         value = ord(str[ind])
-        if value != value - 32 and (value < 123 and value > 97):
-            value  = value - 32
-            print("{}".format(chr(value)), end='')
+
+        if ind != len(str):
+
+            if value != value - 32 and (value < 123 and value > 97):
+                value  = value - 32
+            else:
+                value = ord(str[ind])
+
+            print("{}, ".format(chr(value)), end='')
+
         else:
-            value = ord(str[ind])
-            print("{}".format(chr(value)), end='')
+            print("{}, ".format(chr(value)))
+
