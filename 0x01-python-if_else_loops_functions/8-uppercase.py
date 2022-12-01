@@ -8,6 +8,4 @@ def uppercase(str):
             print("{}".format(chr(value)))
         else:
             value = ord(str[ind])
-            print("{}".format(chr(value)))
-
-
+            print("{}".format(chr(value)), end='')
