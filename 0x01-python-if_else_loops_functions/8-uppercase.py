@@ -12,6 +12,4 @@ def uppercase(str):
 
             print("{}".format(chr(value)), end='')
 
-        elif ind == len(str):
-
-            print("")
+    print("")
