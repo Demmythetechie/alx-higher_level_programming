@@ -5,4 +5,4 @@ def islower(c):
     if char < 97 or char > 122:
         return False
     else:
-        return Truie
+        return True
