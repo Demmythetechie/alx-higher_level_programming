@@ -2,8 +2,8 @@
 def uppercase(str):
     for ind in range(len(str)):
         value = ord(str[ind])
-        
-        if value != value - 32 and (value < 123 and value > 97):
+
+        if value != value - 32 and (value < 123 and value > 96):
             value = value - 32
         else:
             value = ord(str[ind])
