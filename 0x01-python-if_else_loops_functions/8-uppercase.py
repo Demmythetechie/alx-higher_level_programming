@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def uppercase(str):
-    for ind in range(len(str)):
+    for ind in range(len(str) + 1):
         value = ord(str[ind])
 
         if ind != len(str) - 1:
@@ -12,5 +12,6 @@ def uppercase(str):
 
             print("{}".format(chr(value)), end='')
 
-        else:
+        elif ind == len(str) + 1:
+
             print("{}".format(chr(value)))
