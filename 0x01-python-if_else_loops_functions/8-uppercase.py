@@ -7,7 +7,7 @@ def uppercase(str):
         if ind != len(str):
 
             if value != value - 32 and (value < 123 and value > 97):
-                value  = value - 32
+                value = value - 32
             else:
                 value = ord(str[ind])
 
@@ -15,4 +15,3 @@ def uppercase(str):
 
         else:
             print("{}, ".format(chr(value)))
-
