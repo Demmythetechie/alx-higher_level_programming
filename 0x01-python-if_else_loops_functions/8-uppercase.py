@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 def uppercase(str):
-    for ind in range(len(str) + 1):
-        value = ord(str[ind - 1])
+    for ind in range(len(str)):
+        value = ord(str[ind])
 
-        if ind != len(str) - 1:
+        if ind != len(str):
 
             if value != value - 32 and (value < 123 and value > 97):
                 value = value - 32
             else:
-                value = ord(str[ind - 1])
+                value = ord(str[ind])
 
             print("{}".format(chr(value)), end='')
 
-        elif ind == len(str) + 1:
+        elif ind == len(str):
 
             print("")
