@@ -6,11 +6,11 @@ def fizzbuzz():
         if mul % 5 == 0:
             print("Buzz", end='')
         if mul % 3 != 0 or mul % 5 != 0:
-            print(mul)
+            print(mul, end='')
         if mul % 3 != 0 and mul % 5 != 0:
-            print(mul)
+            print(mul, end='')
         if (mul == 99):
             pass
         else:
             print(" ", end='')
-print("")
+        print("")
