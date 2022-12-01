@@ -7,7 +7,7 @@ def fizzbuzz():
             print("Buzz", end='')
         if mul % 3 != 0 and mul % 5 != 0:
             print(mul, end='')
-        if (mul == 100):
+        if (mul == 99):
             pass
         else:
             print(" ", end='')
