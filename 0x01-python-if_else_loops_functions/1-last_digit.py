@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 
 if number < 0:
     last_i = str(number)
-    last_s ='-' + last_i[-1]
+    last_s = '-' + last_i[-1]
     last = int(last_s)
 else:
     last = number % 10
