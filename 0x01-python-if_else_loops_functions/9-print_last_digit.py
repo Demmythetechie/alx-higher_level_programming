@@ -5,12 +5,12 @@ def print_last_digit(number):
         last_f = str(number)
         last_s = '-' + last_f[-1]
         last = int(last_s)
-        print(last)
+        print(last, end='')
         return last
     elif number > 9:
         last = number % 10
-        print(last)
+        print(last, end='')
         return last
     else:
-        print(number)
+        print(number, end='')
         return number
