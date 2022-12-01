@@ -10,7 +10,7 @@ def uppercase(str):
             else:
                 value = ord(str[ind])
 
-            print("{}, ".format(chr(value)), end='')
+            print("{}".format(chr(value)), end='')
 
         else:
             print("{}, ".format(chr(value)))
