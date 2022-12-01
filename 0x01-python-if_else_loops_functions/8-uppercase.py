@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def uppercase(str):
     for ind in range(len(str)):
-
         value = ord(str[ind])
 
         if ind != len(str):
