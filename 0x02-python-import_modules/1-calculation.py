@@ -2,7 +2,7 @@
 if __name__ == '__main__':
     pass
 else:
-    from caculator_1 import add sub mul div
+    from caculator_1 import add, sub, mul, div
 
     a = 10
     b = 5
