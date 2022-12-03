@@ -19,7 +19,8 @@ if __name__ == '__main__':
     elif sign == '/':
         cal = div(a, b)
     else:
-        print("{}".format("Unknown operator. Available operators: +, -, * and /"))
+        error = "Unknown operator. Available operators: +, -, * and /"
+        print("{}".format(error))
         exit(1)
 
     print("{} {} {} = {}".format(a, sign, b, cal))
