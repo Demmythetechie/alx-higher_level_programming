@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-str(var) = "#pythoniscool\n"
+str(var) = "#pythoniscool"
