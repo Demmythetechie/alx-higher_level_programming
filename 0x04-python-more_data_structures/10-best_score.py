@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    ls = []
-    x = 0
-    w = 1
-    for
-    i in a_dictionary:
-        ls[x] = i
-        x = x + 1
-
-    for n in a_dictionary:
-        if a_dictionary[n] > a_dictionary[ls[w]]:
-            return n
-        else:
-            pass
-        w = w + 1
-
+    if bool(a_dictionary):
+        w = 1
+        ls = list(a_dictionary)
+        st = ls[0]
+        for i in range(len(ls) - 1):
+            if a_dictionary[st] > a_dictionary[ls[w]]:
+                pass
+            else:
+                st = ls[w]
+            w = w + 1
+        return st
+    else:
+        return None
