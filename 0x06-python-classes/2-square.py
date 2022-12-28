@@ -15,12 +15,12 @@ class Square:
 
         try:
             if size != int(size):
-                raise TypeError("size not integer")
+                raise TypeError("size must be an integer")
             elif size < 0:
-                raise ValueError("size < 0")
+                raise ValueError("size must be >= 0")
             else:
                 self.__size = size
         except TypeError:
-            print("size must be an integer")
+            raise
         except ValueError:
-            print("size must be >= 0")
+            raise
