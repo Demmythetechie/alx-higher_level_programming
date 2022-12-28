@@ -1,1 +1,2 @@
 task 0: Created an empty class that defines a square
+task 1: Created an empty class that defines a square with an private instance attribute
