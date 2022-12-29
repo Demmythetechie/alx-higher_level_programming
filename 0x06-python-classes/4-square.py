@@ -32,7 +32,12 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ This is the setter for size attribute """
+        """ This is the setter for size attribute
+
+        Args:
+            value (int): This helps with the modificationin setter
+
+        """
 
         try:
             if type(value) != int:
