@@ -27,7 +27,7 @@ class Rectangle:
             number_of_instances (int): class attribute for
             numbers of instances created from this class
 
-            print_symbol (any): class attrbutes for string
+            print_symbol (None): class attrbutes for string
             reprsentation
     """
 
@@ -121,7 +121,7 @@ class Rectangle:
         if self.__height != 0 or self.__width != 0:
             for i in range(self.__height):
                 for x in range(self.__width):
-                    s += Rectangle.print_symbol
+                    s += "{}".format(self.print_symbol)
                 if i != self.__height - 1:
                     s += '\n'
         else:
