@@ -114,7 +114,8 @@ class Rectangle:
     def __repr__(self):
         """ This method returns a string representation of the class """
 
-        return "Rectangle("+ self.__width + self.__height +")"
+        st = "Rectangle({}, {})".format(self.__width, self.__height)
+        return st
 
     def __del__(self):
         """This method returns a message after an instance as been deleted"""
