@@ -101,12 +101,12 @@ class Rectangle:
         """ This method return a rectangle constructed with # """
 
         s = ''
-        if self.__height != 0 or self.__width != 0:
+        if self.__height == 0 or self.__width == 0:
+            s = ''
+        else:
             for i in range(self.__height):
                 for x in range(self.__width):
                     s += '#'
                 if i != self.__height - 1:
                     s += '\n'
-        else:
-            s = ''
         return s
