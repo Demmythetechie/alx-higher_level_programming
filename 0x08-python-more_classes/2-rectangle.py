@@ -87,8 +87,8 @@ class Rectangle:
     def perimeter(self):
         """This methood calculates the perimeter of a rectangle"""
 
-        if self.__height != 0 or self.__width != 0:
-            prm = self.__width * 2 + self.__height * 2
-        else:
+        if self.__width == 0 or self.__height == 0:
             prm = 0
+        else:
+            prm = self.__width * 2 + self.__height * 2
         return prm
