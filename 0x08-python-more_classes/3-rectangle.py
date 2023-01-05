@@ -100,9 +100,9 @@ class Rectangle:
     def __str__(self):
         """ This method return a rectangle constructed with # """
 
-        s = None
+        s = ''
         if self.__height == 0 or self.__width == 0:
-            s = ''
+            pass
         else:
             for i in range(self.__height):
                 for x in range(self.__width):
