@@ -161,4 +161,9 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Returns a rectanngle instance with width==height==size"""
-        return cls(size, size)
+        if type(size) != int:
+            raise TypeError()
+        elif size < 0:
+            raise TypeError()
+        else:
+            return cls(size, size)
