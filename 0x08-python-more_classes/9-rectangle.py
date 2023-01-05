@@ -43,8 +43,21 @@ class Rectangle:
                 Height (int): height of a rectangle
 
         """
-        self.__width = width
-        self.__height = height
+
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
+
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = height
+
         Rectangle.number_of_instances += 1
 
     @property
@@ -160,10 +173,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Returns a rectanngle instance with width==height==size"""
-        if type(size) != int:
-            raise TypeError()
-        elif size < 0:
-            raise TypeError()
-        else:
-            return cls(size, size)
+        """Returns a rectangle instance with width==height==size"""
+        
+        return cls(size, size)
