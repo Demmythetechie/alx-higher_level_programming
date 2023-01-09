@@ -17,5 +17,3 @@ class MyList(list):
         """
         self = sorted(self)
         print(self)
-
-
