@@ -68,3 +68,17 @@ Case_04:
 	  File "/home/vagrant/alx-higher_level_programming/0x0A-python-inheritance/1-my_list.py", line 18, in print_sorted
 	    self = sorted(self)
 	TypeError: '<' not supported between instances of 'list' and 'int'
+
+Case_05:
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(2, 3, 8)
+	Traceback (most recent call last):
+	  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+            exec(compile(example.source, filename, "single",
+	  File "<doctest 1-my_list.txt[36]>", line 1, in <module>
+	    my_list.append(2, 3, 8)
+	TypeError: append() takes exactly one argument (3 given)
