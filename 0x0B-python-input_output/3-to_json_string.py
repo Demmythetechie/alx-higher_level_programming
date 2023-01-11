@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-
 """This module deals with json representation"""
 
 
