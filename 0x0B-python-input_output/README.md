@@ -4,3 +4,4 @@ Task 2: This functions write a text to a file. If the file exist it automaticall
 Task 3: This converts python object of list to json object using dumps which returns the json object as a string
 Task 4: This function converts json object to a python object returning it to a string
 Task 5: This function converts python object to json and then returns it to a file
+Task 6: This function converts json object to python object. Taking the python object from a file. The json object is returned to a string 
