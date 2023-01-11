@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 
-""" This module deals with json representation """
+"""This module deals with json representation"""
 
 
 def to_json_string(my_obj):
