@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module modifies a file """
 
+
 def write_file(filename="", text=""):
     """
         This functions write a text to a file.
