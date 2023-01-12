@@ -3,6 +3,7 @@
     This module returns true or false
 """
 
+
 def is_same_class(obj, a_class):
     """
         This function determines if
