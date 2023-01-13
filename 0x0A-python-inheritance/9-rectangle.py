@@ -14,7 +14,6 @@ class Rectangle(BaseGeometry):
         if self.integer_validator("height", height):
             self.__height = height
 
-
     def area(self):
         """This function caculates the area of a rectangle"""
 
