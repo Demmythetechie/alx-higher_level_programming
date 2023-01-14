@@ -23,7 +23,7 @@ class MyInt(int):
             This method has been altered to give a
             function of '==' instead of '!='
         """
-        
+
         boo = True
         if self > other or self < other:
             boo = False
