@@ -29,7 +29,16 @@ class RectangleAttrIdTest(unittest.TestCase):
         self.assertEqual(r4.id, 2)
 
 class RectangleMainAttrTest(unittest.TestCase):
-    """ d """
+    """
+    This class test the attribute of class Rectangle
+    if it works as planned
+
+    TestCases:
+        test_for_attr_width
+        test_for_height_attr
+        test_for_x_attr
+        test_for_y_attr
+    """
 
     def test_for_attr_width(self):
         """
@@ -40,6 +49,7 @@ class RectangleMainAttrTest(unittest.TestCase):
             manipulation of setter
 
         """
+
         w1 = Rectangle(21, 9)
         self.assertEqual(w1.width, 21)
         w1.width = 3
@@ -50,12 +60,14 @@ class RectangleMainAttrTest(unittest.TestCase):
         """
         Testing for input faluire:
             TypeError: list, str, tuple, dic, double
-            valueError: negative values
+            valueError: negative values and zero
 
         """
         
         with self.assertRaises(ValueError):
             w2 = Rectangle(-34, 3)
+        with self.assertRaises(ValueError):
+            w2 = Rectangle(0, 34)
         with self.assertRaises(TypeError):
             w2 = Rectangle(72.3, 3)
         with self.assertRaises(TypeError):
@@ -67,13 +79,16 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             w2 = Rectangle({'width' : 4}, 3)
 
+        """Testing for id:"""
+
         w2 = Rectangle(34, 3)
         w1.width = w2.width + w1.width
         self.assertEqual(w1.width, 35)
+        self.assertEqual(w2.id, 4)
 
     def test_for_height_attr(self):
         """
-        Testing required function expected from attribute width
+        Testing required function expected from attribute height
         including:
             input through instantiation
             input from setter
@@ -90,12 +105,14 @@ class RectangleMainAttrTest(unittest.TestCase):
         """
         Testing for input faluire:
             TypeError: list, str, tuple, dic, double
-            valueError: negative values
+            valueError: negative values and zero
 
         """
 
         with self.assertRaises(ValueError):
             h2 = Rectangle(3, -34)
+        with self.assertRaises(ValueError):
+            h2 = Rectangle(3, 0)
         with self.assertRaises(TypeError):
             h2 = Rectangle(3, 72.3)
         with self.assertRaises(TypeError):
@@ -107,13 +124,16 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             h2 = Rectangle(3, {'height' : 4})
 
+        """Testing for id:"""
+
         h2 = Rectangle(34, 3)
         h1.height = h2.height + h1.height
         self.assertEqual(h1.height, 4)
+        self.assertEqual(h2.id, 6)
 
     def test_for_x_attr(self):
         """
-        Testing required function expected from attribute width
+        Testing required function expected from attribute x
         including:
             input through instantiation
             input from setter
@@ -147,6 +167,53 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             x2 = Rectangle(3, 44, {'x' : 4})
 
+        """Testing for id:"""
+
         x2 = Rectangle(34, 3, 8)
         x1.x = x2.x + x1.x
         self.assertEqual(x1.x, 9)
+        self.assertEqual(x2.id, 8)
+
+    def test_for_y_attr(self):
+        """
+        Testing required function expected from attribute y
+        including:
+            input through instantiation
+            input from setter
+            manipulation of setter
+
+        """
+
+        y1 = Rectangle(21, 9)
+        self.assertEqual(y1.y, 0)
+        y1.y = 3
+        self.assertEqual(y1.y, 3)
+        y1.y = y1.y - 2
+        self.assertEqual(y1.y, 1)
+
+        """
+        Testing for input faluire:
+            TypeError: list, str, tuple, dic, double
+            valueError: negative values
+
+        """
+
+        with self.assertRaises(ValueError):
+            y2 = Rectangle(3, 34, 83, -34)
+        with self.assertRaises(TypeError):
+            y2 = Rectangle(3, 45, 83, 72.3)
+        with self.assertRaises(TypeError):
+            y2 = Rectangle(3, 56, 89, 'ekme')
+        with self.assertRaises(TypeError):
+            y2 = Rectangle(3, 66, 84, [2])
+        with self.assertRaises(TypeError):
+            y2 = Rectangle(3, 65, 63, (2, 3, 5))
+        with self.assertRaises(TypeError):
+            y2 = Rectangle(3, 44, 84, {'x' : 4})
+
+        """Testing for id:"""
+
+        y2 = Rectangle(34, 3, 8, 4)
+        y1.y = y2.y + y1.y
+        self.assertEqual(y1.y, 5)
+        self.assertEqual(y2.id, 10)
