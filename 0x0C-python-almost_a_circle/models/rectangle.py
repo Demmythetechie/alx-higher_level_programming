@@ -20,10 +20,33 @@ class Rectangle(Base):
 
         """
 
-        self.__width = width
-        self.__height = height
-        self.__x = x 
-        self.__y = y
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
+
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
+
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
 
         super().__init__(id)
 
@@ -43,7 +66,12 @@ class Rectangle(Base):
 
         """
 
-        self.__width = width
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
 
     @property
     def height(self):
@@ -61,7 +89,12 @@ class Rectangle(Base):
 
         """
 
-        self.__height = height
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
 
     @property
     def x(self):
@@ -79,7 +112,12 @@ class Rectangle(Base):
 
         """
 
-        self.__x = x
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
 
     @property
     def y(self):
@@ -97,4 +135,9 @@ class Rectangle(Base):
 
         """
 
-        self.__y = y
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
