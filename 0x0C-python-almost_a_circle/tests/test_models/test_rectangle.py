@@ -6,6 +6,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class RectangleAttrIdTest(unittest.TestCase):
     """
         pos means positive
@@ -27,6 +28,7 @@ class RectangleAttrIdTest(unittest.TestCase):
             r3 = Rectangle(24, 4, 0, 0, -12)
         r4 = Rectangle(24, 4)
         self.assertEqual(r4.id, 2)
+
 
 class RectangleMainAttrTest(unittest.TestCase):
     """
@@ -63,7 +65,7 @@ class RectangleMainAttrTest(unittest.TestCase):
             valueError: negative values and zero
 
         """
-        
+
         with self.assertRaises(ValueError):
             w2 = Rectangle(-34, 3)
         with self.assertRaises(ValueError):
@@ -77,7 +79,7 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             w2 = Rectangle((2, 3, 5), 3)
         with self.assertRaises(TypeError):
-            w2 = Rectangle({'width' : 4}, 3)
+            w2 = Rectangle({'width': 4}, 3)
 
         """Testing for id:"""
 
@@ -122,7 +124,7 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             h2 = Rectangle(3, (2, 3, 5))
         with self.assertRaises(TypeError):
-            h2 = Rectangle(3, {'height' : 4})
+            h2 = Rectangle(3, {'height': 4})
 
         """Testing for id:"""
 
@@ -165,7 +167,7 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             x2 = Rectangle(3, 65, (2, 3, 5))
         with self.assertRaises(TypeError):
-            x2 = Rectangle(3, 44, {'x' : 4})
+            x2 = Rectangle(3, 44, {'x': 4})
 
         """Testing for id:"""
 
@@ -209,7 +211,7 @@ class RectangleMainAttrTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             y2 = Rectangle(3, 65, 63, (2, 3, 5))
         with self.assertRaises(TypeError):
-            y2 = Rectangle(3, 44, 84, {'x' : 4})
+            y2 = Rectangle(3, 44, 84, {'y': 4})
 
         """Testing for id:"""
 
@@ -217,6 +219,7 @@ class RectangleMainAttrTest(unittest.TestCase):
         y1.y = y2.y + y1.y
         self.assertEqual(y1.y, 5)
         self.assertEqual(y2.id, 10)
+
 
 class RectangleTaskThree(unittest.TestCase):
 

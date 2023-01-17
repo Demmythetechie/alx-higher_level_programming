@@ -150,4 +150,3 @@ class Rectangle(Base):
         """
 
         return self.__width * self.__height
-
