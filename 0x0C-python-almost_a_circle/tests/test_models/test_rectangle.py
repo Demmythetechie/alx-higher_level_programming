@@ -217,3 +217,18 @@ class RectangleMainAttrTest(unittest.TestCase):
         y1.y = y2.y + y1.y
         self.assertEqual(y1.y, 5)
         self.assertEqual(y2.id, 10)
+
+class RectangleTaskThree(unittest.TestCase):
+
+    def test_for_3_task_area(self):
+        """
+        Testing for area of a rectangle
+        using attribute width and height
+        """
+
+        area1 = Rectangle(30, 2)
+        self.assertEqual(area1.area(), 60)
+
+        with self.assertRaises(ValueError):
+            area2 = Rectangle(-5, 2)
+            self.assertEqual(area2.area(), -10)
