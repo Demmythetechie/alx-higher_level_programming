@@ -290,7 +290,7 @@ class RectangleTask4(unittest.TestCase):
 
     """
 
-    def correct_output_test(self):
+    def test_correct_output(self):
 
         """
         This method tests expected function
@@ -299,9 +299,9 @@ class RectangleTask4(unittest.TestCase):
         """
 
         st = Rectangle(10, 5, 0, 1, 19)
-        self.assertEqual(st, "[Rectangle] (19) 0/1 - 10/5")
+        self.assertEqual(st.__str__(), "[Rectangle] (19) 0/1 - 10/5")
 
-    def error_output_test(self):
+    def test_error_output(self):
         """
         This method tests error bound cases
         for __str__ method in Rectangle class
@@ -311,3 +311,22 @@ class RectangleTask4(unittest.TestCase):
         st_1 = Rectangle(10, 5, 0, 1, 19)
         with self.assertRaises(TypeError):
             self.assertEqual(st_1.__str__(3), "[Rectangle] (19) 0/1 - 10/5")
+
+
+class RectangleTest5(unittest.TestCase):
+    """
+    This class test the implemention of display
+
+    """
+
+    def test_new_display(self):
+        st1 = "\n"\
+                "\n"\
+                "\n"\
+                "\n"\
+                "     ####\n"\
+                "     ####\n"\
+                "     ####\n"
+
+        d3 = Rectangle(4, 3, 5, 4)
+        self.assertEqual(d3.display(), st1)

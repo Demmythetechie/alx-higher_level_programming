@@ -156,8 +156,27 @@ class Rectangle(Base):
             Use Width and Height to construct a rectangle shape
         """
 
+        """
+        previous display code
+            st = ''
+            for x in range(self.__height):
+                for i in range(self.__width):
+                    st += '#'
+                if x != self.__height:
+                    st += '\n'
+            print(st, end='')
+            return st
+
+        """
+
+        # New display code
+
         st = ''
+        for i in range(self.__y):
+            st += '\n'
         for x in range(self.__height):
+            for y in range(self.__x):
+                st += ' '
             for i in range(self.__width):
                 st += '#'
             if x != self.__height:
