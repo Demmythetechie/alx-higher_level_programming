@@ -164,3 +164,14 @@ class Rectangle(Base):
                 st += '\n'
         print(st, end='')
         return st
+
+    def __str__(self):
+        """
+        This method changes the output of an object from
+        the location of the object format to format
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+              .format(self.id, self.__x,
+                      self.__y, self.__width, self.__height))

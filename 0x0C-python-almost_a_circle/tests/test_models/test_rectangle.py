@@ -281,3 +281,33 @@ class RectangleTask3(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             d2 = Rectangle(4)
+
+
+class RectangleTask4(unittest.TestCase):
+    """
+    This class tests correct and error bound cases
+    for __str__ method in Rectangle class
+
+    """
+
+    def correct_output_test(self):
+
+        """
+        This method tests expected function
+        for __str__ method in Rectangle class
+
+        """
+
+        st = Rectangle(10, 5, 0, 1, 19)
+        self.assertEqual(st, "[Rectangle] (19) 0/1 - 10/5")
+
+    def error_output_test(self):
+        """
+        This method tests error bound cases
+        for __str__ method in Rectangle class
+
+        """
+
+        st_1 = Rectangle(10, 5, 0, 1, 19)
+        with self.assertRaises(TypeError):
+            self.assertEqual(st_1.__str__(3), "[Rectangle] (19) 0/1 - 10/5")
