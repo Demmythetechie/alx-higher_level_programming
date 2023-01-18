@@ -30,7 +30,7 @@ class RectangleAttrIdTest(unittest.TestCase):
         self.assertEqual(r4.id, 2)
 
 
-class RectangleMainAttrTest(unittest.TestCase):
+class RectangleTask1(unittest.TestCase):
     """
     This class test the attribute of class Rectangle
     if it works as planned
@@ -221,9 +221,9 @@ class RectangleMainAttrTest(unittest.TestCase):
         self.assertEqual(y2.id, 10)
 
 
-class RectangleTaskThree(unittest.TestCase):
+class RectangleTask2(unittest.TestCase):
 
-    def test_for_3_task_area(self):
+    def test_for_area(self):
         """
         Testing for area of a rectangle
         using attribute width and height
@@ -235,3 +235,49 @@ class RectangleTaskThree(unittest.TestCase):
         with self.assertRaises(ValueError):
             area2 = Rectangle(-5, 2)
             self.assertEqual(area2.area(), -10)
+
+        with self.assertRaises(TypeError):
+            area2 = Rectangle(5, 2)
+            self.assertEqual(area2.area(5), 10)
+
+        with self.assertRaises(TypeError):
+            area2 = Rectangle(3)
+
+
+class RectangleTask3(unittest.TestCase):
+    """
+        This test the display method
+    """
+
+    def test_for_display(self):
+        """
+        Testing for display of a rectangle
+        using attribute width and height
+        """
+        st_d1 = "####\n"\
+                "####\n"\
+                "####\n"\
+                "####\n"
+
+        d1 = Rectangle(4, 4)
+        self.assertEqual(d1.display(), st_d1)
+
+    def test_for_incorect_display(self):
+        """
+        This test incorrect cases for display method
+        including:
+            Missing height argument
+            argument in display method
+
+        """
+        st_d2 = "####\n"\
+                "####\n"\
+                "####\n"\
+                "####\n"
+
+        with self.assertRaises(TypeError):
+            d2 = Rectangle(4, 4)
+            self.assertEqual(d2.display(5), st_d2)
+
+        with self.assertRaises(TypeError):
+            d2 = Rectangle(4)

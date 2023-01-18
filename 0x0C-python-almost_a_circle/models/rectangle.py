@@ -150,3 +150,17 @@ class Rectangle(Base):
         """
 
         return self.__width * self.__height
+
+    def display(self):
+        """
+            Use Width and Height to construct a rectangle shape
+        """
+
+        st = ''
+        for x in range(self.__height):
+            for i in range(self.__width):
+                st += '#'
+            if x != self.__height:
+                st += '\n'
+        print(st, end='')
+        return st
