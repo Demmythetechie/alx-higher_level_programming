@@ -197,6 +197,9 @@ class Rectangle(Base):
                         self.__y, self.__width, self.__height))
 
     def update(self, *args):
+        """
+        This updates the value of the rectangle attributes
+        """
         num = 0
         for i in range(len(args)):
             num += 1
