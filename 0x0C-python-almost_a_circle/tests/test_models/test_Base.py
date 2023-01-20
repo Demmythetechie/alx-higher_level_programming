@@ -4,7 +4,7 @@ import unittest
 from models.base import Base
 
 
-class BaseTest(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """This class contains various test cases on class Base"""
 
     def test_no_integer(self):
