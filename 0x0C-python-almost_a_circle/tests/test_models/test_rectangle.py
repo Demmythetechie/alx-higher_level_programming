@@ -330,3 +330,31 @@ class RectangleTest5(unittest.TestCase):
 
         d3 = Rectangle(4, 3, 5, 4)
         self.assertEqual(d3.display(), st1)
+
+
+class RectangleTest6(unittest.TestCase):
+    """
+    This class test the implementation of update
+    """
+
+    def test_correct_out(self):
+        u1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(str(u1), "[Rectangle] (16) 10/10 - 10/10")
+
+        u1.update(89)
+        self.assertEqual(str(u1), "[Rectangle] (89) 10/10 - 10/10")
+
+        u1.update(89, 2)
+        self.assertEqual(str(u1), "[Rectangle] (89) 10/10 - 2/10")
+
+        u1.update()
+        self.assertEqual(str(u1), "[Rectangle] (89) 10/10 - 2/10")
+
+        u1.update(89, 2, 3)
+        self.assertEqual(str(u1), "[Rectangle] (89) 10/10 - 2/3")
+
+        u1.update(89, 2, 3, 4)
+        self.assertEqual(str(u1), "[Rectangle] (89) 4/10 - 2/3")
+
+        u1.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(u1), "[Rectangle] (89) 4/5 - 2/3")
