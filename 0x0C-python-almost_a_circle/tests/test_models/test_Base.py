@@ -26,3 +26,6 @@ class TestBase(unittest.TestCase):
     def test_negative_int(self):
         with self.assertRaises(ValueError):
             b1 = Base(-12)
+
+if __name__ == "__main__":
+    unittest.main()
