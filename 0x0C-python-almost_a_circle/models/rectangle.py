@@ -196,22 +196,35 @@ class Rectangle(Base):
                 .format(self.id, self.__x,
                         self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         This updates the value of the rectangle attributes
         """
-        num = 0
-        for i in range(len(args)):
-            num += 1
-        for i in range(num):
-            if i == 4:
-                self.__y = args[i]
-            elif i == 3:
-                self.__x = args[i]
-            elif i == 2:
-                self.__height = args[i]
-            elif i == 1:
-                self.__width = args[i]
-            elif i == 0:
-                self.id = args[i]
-            num -= 1
+
+        if len(args) != 0:
+            num = 0
+            for i in range(len(args)):
+                num += 1
+            for i in range(num):
+                if i == 4:
+                    self.__y = args[i]
+                elif i == 3:
+                    self.__x = args[i]
+                elif i == 2:
+                    self.__height = args[i]
+                elif i == 1:
+                    self.__width = args[i]
+                elif i == 0:
+                    self.id = args[i]
+                num -= 1
+        else:
+            if 'y' in kwargs:
+                self.__y = kwargs.get('y')
+            if 'x' in kwargs:
+                self.__x = kwargs.get('x')
+            if 'width' in kwargs:
+                self.__width = kwargs.get('width')
+            if 'height' in kwargs:
+                self.__height = kwargs.get('height')
+            if 'id' in kwargs:
+                self.id = kwargs.get('id')

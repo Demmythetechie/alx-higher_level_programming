@@ -29,7 +29,7 @@ class RectangleAttrIdTest(unittest.TestCase):
         self.assertEqual(r4.id, 7)
 
 
-class RectangleTask1(unittest.TestCase):
+class RectangleTask3(unittest.TestCase):
     """
     This class test the attribute of class Rectangle
     if it works as planned
@@ -211,7 +211,7 @@ class RectangleTask1(unittest.TestCase):
         self.assertEqual(y2.id, 15)
 
 
-class RectangleTask2(unittest.TestCase):
+class RectangleTask4(unittest.TestCase):
 
     def test_for_area(self):
         """
@@ -234,7 +234,7 @@ class RectangleTask2(unittest.TestCase):
             area2 = Rectangle(3)
 
 
-class RectangleTask3(unittest.TestCase):
+class RectangleTask5(unittest.TestCase):
     """
         This test the display method
     """
@@ -272,7 +272,7 @@ class RectangleTask3(unittest.TestCase):
             d2 = Rectangle(4)
 
 
-class RectangleTask4(unittest.TestCase):
+class RectangleTask6(unittest.TestCase):
     """
     This class tests correct and error bound cases
     for __str__ method in Rectangle class
@@ -299,7 +299,7 @@ class RectangleTask4(unittest.TestCase):
             self.assertEqual(st_1.__str__(3), "[Rectangle] (19) 0/1 - 10/5")
 
 
-class RectangleTest5(unittest.TestCase):
+class RectangleTest7(unittest.TestCase):
     """
     This class test the implemention of display
     """
@@ -317,7 +317,7 @@ class RectangleTest5(unittest.TestCase):
         self.assertEqual(d3.display(), st1)
 
 
-class RectangleTest6(unittest.TestCase):
+class RectangleTest8(unittest.TestCase):
     """
     This class test the implementation of update
     """
@@ -343,6 +343,39 @@ class RectangleTest6(unittest.TestCase):
 
         u1.update(89, 2, 3, 4, 5)
         self.assertEqual(str(u1), "[Rectangle] (89) 4/5 - 2/3")
+
+
+class RectangleTest9(unittest.TestCase):
+    """
+    This class tests the implementation of update method 
+    with new implementation of **kwargs argument.
+    if *args does not contain any element 
+    it will use the elements in kwargs else
+    uses the default value passed to the init method
+    """
+
+    def test_correct(self):
+
+        u2 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(str(u2), "[Rectangle] (22) 10/10 - 10/10")
+
+        u2.update(height=1)
+        self.assertEqual(str(u2), "[Rectangle] (22) 10/10 - 10/1")
+
+        u2.update(width=1, x=2)
+        self.assertEqual(str(u2), "[Rectangle] (22) 2/10 - 1/1")
+
+        u2.update()
+        self.assertEqual(str(u2), "[Rectangle] (22) 2/10 - 1/1")
+
+        u2.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(u2), "[Rectangle] (89) 4/5 - 2/3")
+
+        u2.update(y=1, width=2, x=3, id=89)
+        self.assertEqual(str(u2), "[Rectangle] (89) 3/1 - 2/3")
+
+        u2.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(str(u2), "[Rectangle] (89) 1/3 - 4/2")
 
 if __name__ == "__main__":
     unittest.main()
