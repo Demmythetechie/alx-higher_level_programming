@@ -24,6 +24,6 @@ class Square(Rectangle):
         [Square] (<id>) <x>/<y> - <width>/<height>
         """
 
-
+        self.update()
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y, self.width))
