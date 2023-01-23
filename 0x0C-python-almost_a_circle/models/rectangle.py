@@ -238,10 +238,10 @@ class Rectangle(Base):
 
         dic = {
             'x': getattr(self, 'x'),
-            'y': getattr(self, 'y'),
+            'width': getattr(self, 'width'),
             'id': getattr(self, 'id'),
             'height': getattr(self, 'height'),
-            'width': getattr(self, 'width'),
+            'y': getattr(self, 'y'),
         }
 
         return dic
