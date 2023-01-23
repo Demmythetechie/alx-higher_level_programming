@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains a class Rectangle"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -228,3 +229,19 @@ class Rectangle(Base):
                 self.__height = kwargs.get('height')
             if 'id' in kwargs:
                 self.id = kwargs.get('id')
+
+    def to_dictionary(self):
+        """
+        This method returns a dictionary of all the attribute
+        including the inherited ones of class Rectangle
+        """
+
+        dic = {
+            'x': getattr(self, 'x'),
+            'y': getattr(self, 'y'),
+            'id': getattr(self, 'id'),
+            'height': getattr(self, 'height'),
+            'width': getattr(self, 'width'),
+        }
+
+        return dic

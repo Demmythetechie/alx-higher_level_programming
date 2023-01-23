@@ -347,14 +347,17 @@ class RectangleTest8(unittest.TestCase):
 
 class RectangleTest9(unittest.TestCase):
     """
-    This class tests the implementation of update method 
+    This class tests the implementation of update method
     with new implementation of **kwargs argument.
-    if *args does not contain any element 
+    if *args does not contain any element
     it will use the elements in kwargs else
     uses the default value passed to the init method
     """
 
     def test_correct(self):
+        """
+        This test for expected output
+        """
 
         u2 = Rectangle(10, 10, 10, 10)
         self.assertEqual(str(u2), "[Rectangle] (22) 10/10 - 10/10")
@@ -376,6 +379,48 @@ class RectangleTest9(unittest.TestCase):
 
         u2.update(x=1, height=2, y=3, width=4)
         self.assertEqual(str(u2), "[Rectangle] (89) 1/3 - 4/2")
+
+
+class RectangleTest13(unittest.TestCase):
+    """
+    This class tests the implementation of to_dictionary
+    method. which prints the attribute of class Rectangle
+    """
+
+    def test_correct(self):
+        """
+        This test for expected output
+        """
+
+        r1 = Rectangle(10, 5, 2, 1, 9)
+        self.assertEqual(str(r1), "[Rectangle] (9) 2/1 - 10/5")
+        r1_dict = r1.to_dictionary()
+        self.assertEqual(r1_dict, {'x': 2,
+                                   'y': 1,
+                                   'id': 9,
+                                   'height': 5,
+                                   'width': 10
+                                   })
+        self.assertIsInstance(r1_dict, dict)
+
+        r1.update(90, 10, 5, 4, 2)
+        self.assertEqual(str(r1), "[Rectangle] (90) 4/2 - 10/5")
+        r2_dict = r1.to_dictionary()
+        self.assertEqual(r2_dict, {'x': 4,
+                                   'y': 2,
+                                   'id': 90,
+                                   'height': 5,
+                                   'width': 10
+                                   })
+
+        r2 = Rectangle(20, 10, 10, 5, 89)
+        self.assertEqual(str(r2), "[Rectangle] (89) 10/5 - 20/10")
+        r2.update(**r1_dict)
+        self.assertEqual(str(r2), "[Rectangle] (9) 2/1 - 10/5")
+        r3_dict = r2.to_dictionary()
+        self.assertTrue(r1_dict == r3_dict)
+        self.assertFalse(r2_dict == r1_dict)
+
 
 if __name__ == "__main__":
     unittest.main()
