@@ -11,3 +11,4 @@ Task 9: creates a table second_table in the database hbtn_0c_0
 Task 10: lists all records of the table second_table
 Task 11: lists all record of the second_table where score >= 10
 Task 12: updates the score of Bob to 10 in second_table
+Task 13: deletes all record with score <= 5
