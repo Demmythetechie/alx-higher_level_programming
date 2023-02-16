@@ -6,3 +6,4 @@ Task 4: created a table firstname along with the fields id and name
 Task 5: description of the table first_table
 Task 6: list all rows of the table first_table
 Task 7: insert data in all into the first_table
+Task 8: displays the number of records with a condition id=89
