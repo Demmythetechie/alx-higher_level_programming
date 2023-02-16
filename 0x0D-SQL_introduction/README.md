@@ -8,3 +8,4 @@ Task 6: list all rows of the table first_table
 Task 7: insert data in all into the first_table
 Task 8: displays the number of records with a condition id=89
 Task 9: creates a table second_table in the database hbtn_0c_0
+Task 10: lists all records of the table second_table
