@@ -12,3 +12,4 @@ Task 10: lists all records of the table second_table
 Task 11: lists all record of the second_table where score >= 10
 Task 12: updates the score of Bob to 10 in second_table
 Task 13: deletes all record with score <= 5
+Task 14: computes the score average of all records in the table second_table
