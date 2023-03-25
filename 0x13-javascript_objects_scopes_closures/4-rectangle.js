@@ -8,11 +8,11 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (c='X') {
     let str = '';
     for (let i = 0; i < this.height; i++) {
       for (let i = 0; i < this.width; i++) {
-        str += 'X';
+        str += c;
       }
       if (i !== this.height - 1) {
         str += '\n';
@@ -28,7 +28,7 @@ module.exports = class Rectangle {
   }
 
   double () {
-    this.width = this.width ** 2;
-    this.height = this.height ** 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
 };
