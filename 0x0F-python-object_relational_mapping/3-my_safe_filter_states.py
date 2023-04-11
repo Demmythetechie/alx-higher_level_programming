@@ -15,7 +15,7 @@ db = MySQLdb.connect(
 )
 
 cur = db.cursor()
-cur.execute("SELECT * FROM states WHERE states.name= '%s'" % sys.argv[4])
+cur.execute("SELECT * FROM states WHERE states.name= %s", (sys.argv[4], ))
 row = cur.fetchall()
 for i in row:
     print(i)
