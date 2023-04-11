@@ -8,11 +8,10 @@ import MySQLdb
 
 if __name__ == '__main__':
     """
-    This does what task 2 does but instead escape the 
+    This does what task 2 does but instead escape the
     user data from an sql statement to a string incase
     it is a sql statement
     """
-
 
     db = MySQLdb.connect(
             host="localhost",
