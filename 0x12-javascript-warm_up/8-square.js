@@ -6,7 +6,7 @@ if (isNaN(argv[2])) {
   for (let row = 0; row < argv[2]; row++) {
     let r = '';
     for (let col = 0; col < argv[2]; col++) {
-      r = r + 'x';
+      r = r + 'X';
     }
     console.log(r);
   }
