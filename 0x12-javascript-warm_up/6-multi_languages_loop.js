@@ -10,7 +10,6 @@ const arrs = [
   'JavaScript is amazing'
 ];
 
-arrs.map((arr) => {
-  console.log(arr);
-  return '';
-});
+for (let tm = 0; tm < arrs.length; tm++) {
+  console.log(arrs[tm]);
+}
