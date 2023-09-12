@@ -37,4 +37,8 @@ function merge (left, right) {
 
 const array = process.argv.slice(2);
 const sortedArray = mergeSort(array);
-console.log(sortedArray[sortedArray.length - 2]);
+if (process.argv.length <= 3) {
+  console.log(0);
+} else {
+  console.log(sortedArray[sortedArray.length - 2]);
+}
