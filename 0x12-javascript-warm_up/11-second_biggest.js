@@ -36,6 +36,5 @@ function merge (left, right) {
 }
 
 const array = process.argv.slice(2);
-console.log(array);
 const sortedArray = mergeSort(array);
 console.log(sortedArray[sortedArray.length - 2]);
