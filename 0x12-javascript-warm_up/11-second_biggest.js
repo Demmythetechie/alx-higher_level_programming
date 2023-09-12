@@ -23,7 +23,7 @@ function merge (left, right) {
   let rightIndex = 0;
 
   while (leftIndex < left.length && rightIndex < right.length) {
-    if (left[leftIndex] < right[rightIndex]) {
+    if (Number(left[leftIndex]) < Number(right[rightIndex])) {
       result.push(left[leftIndex]);
       leftIndex++;
     } else {
@@ -36,5 +36,6 @@ function merge (left, right) {
 }
 
 const array = process.argv.slice(2);
+console.log(array);
 const sortedArray = mergeSort(array);
 console.log(sortedArray[sortedArray.length - 2]);
