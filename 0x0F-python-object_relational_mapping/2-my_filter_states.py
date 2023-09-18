@@ -26,8 +26,9 @@ if __name__ == '__main__':
 
     cur = engine.cursor()
     cur.execute('''
-            SELECT * FROM states WHERE name = "{}" ORDER
+            SELECT * FROM states WHERE name = '{}' ORDER
             BY id ASC;
     '''.format(sys.argv[4]))
-    row = cur.fetchone()
-    print(row)
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
