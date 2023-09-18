@@ -23,7 +23,7 @@ if __name__ == '__main__':
     cur = engine.cursor()
     cur.execute("""
             SELECT * FROM states
-            WHERE name LIKE 'N%' AND name LIKE 'n%'
+            WHERE name LIKE BINARY 'N%'
             ORDER BY id ASC;
     """)
     rows = cur.fetchall()
