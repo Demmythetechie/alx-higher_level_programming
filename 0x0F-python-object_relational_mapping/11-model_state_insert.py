@@ -22,3 +22,7 @@ if __name__ == '__main__':
     newState = State(name='Louisiana')
     session.add(newState)
     session.commit()
+    # printing state id
+
+    row = session.query(State).filter(State.name == 'Louisiana').first()
+    print(row.id)
