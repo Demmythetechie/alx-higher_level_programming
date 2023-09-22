@@ -24,4 +24,5 @@ if __name__ == '__main__':
     instRows = session.query(State).filter(State.name.like('%a%'))
     for row in instRows:
         session.delete(row)
-        session.commit()
+    session.commit()
+    session.close()
