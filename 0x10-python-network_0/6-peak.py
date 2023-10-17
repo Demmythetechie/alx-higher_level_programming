@@ -6,6 +6,10 @@ and pops the last element
 
 
 def sort(arr):
+    """
+    This function sorts the list
+    """
+
     if len(arr) <= 1:
         return arr
 
@@ -18,6 +22,10 @@ def sort(arr):
 
 
 def find_peak(list_of_integers):
+    """
+    This function sorts and pops the last element
+    """
+
     ls = sort(list_of_integers)
     if len(ls) == 0:
         return None
