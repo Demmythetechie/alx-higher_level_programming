@@ -20,4 +20,4 @@ if __name__ == "__main__":
     print("""Body response:
 - type: {}
 - content: {}
-- utf8 content: {}   \n""".format(types, content, utf), end='')
+- utf8 content: {}""".format(types, content, utf))
