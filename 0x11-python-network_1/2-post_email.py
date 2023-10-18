@@ -19,6 +19,6 @@ if __name__ == "__main__":
     try:
         with urlopen(post) as response:
             data = response.read()
-        print(data)
+        print(data.decode('utf-8'))
     except:
         pass
