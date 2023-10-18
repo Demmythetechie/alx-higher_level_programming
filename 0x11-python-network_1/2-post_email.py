@@ -15,7 +15,7 @@ if __name__ == "__main__":
     email and also display the body response
     """
 
-    post = Request(argv[1], data=None, headers={'email': argv[2]})
+    post = Request(argv[1], headers={'email': argv[2]})
     try:
         with urlopen(post) as response:
             data = response.read()
