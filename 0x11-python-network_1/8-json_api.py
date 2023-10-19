@@ -14,10 +14,10 @@ if __name__ == "__main__":
     or without a value
     """
 
-    if argv[1]:
-        value = argv[1]
-    else:
+    if len(argv) <= 1:
         value = ""
+    else:
+        value = argv[1]
     url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, data={'q': value})
     js = response.json()
