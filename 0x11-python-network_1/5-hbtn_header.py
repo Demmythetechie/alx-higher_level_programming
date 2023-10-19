@@ -20,5 +20,4 @@ if __name__ == "__main__":
         value = response.headers['X-Request-Id']
         print(value)
     except Exception as e:
-        value = ""
-        print(value)
+        pass
