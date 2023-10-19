@@ -7,7 +7,6 @@ or without a value
 import requests
 from sys import argv
 
-
 if __name__ == "__main__":
     """
     This script takes in a url and sends
