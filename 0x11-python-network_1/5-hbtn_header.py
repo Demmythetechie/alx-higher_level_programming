@@ -16,5 +16,9 @@ if __name__ == "__main__":
     """
 
     response = requests.get(argv[1])
-    value = response.headers['X-Request-Id']
-    print(value)
+    try:
+        value = response.headers['X-Request-Id']
+        print(value)
+    except Exception as e:
+        value = ""
+        print(value)
