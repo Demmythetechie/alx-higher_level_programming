@@ -20,7 +20,10 @@ if __name__ == "__main__":
         value = argv[1]
     url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, data={'q': value})
-    js = response.json()
+    try:
+        js = response.json()
+    except:
+        js = None
 
     if type(js) == dict and len(js) != 0:
         print('[{}] {}'.format(js.get("id"), js.get("name")))
