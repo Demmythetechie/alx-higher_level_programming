@@ -13,10 +13,8 @@ if __name__ == "__main__":
     to the url and displays the body of the response
     """
 
-    response = None
-    try:
-        response = requests.get(argv[1])
+    response = requests.get(argv[1])
+    if response.status_code >= 400:
+        print("Error code: {}".format(response.status_code))
+    else:
         print(response.text)
-    except:
-        if response.status_code >= 400:
-            print("Error code: {}".format(response.status_code))
