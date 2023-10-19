@@ -22,7 +22,7 @@ if __name__ == "__main__":
     response = requests.post(url, data={'q': value})
     try:
         js = response.json()
-    except Exeception as e:
+    except Exception as e:
         js = None
 
     if type(js) == dict and len(js) != 0:
