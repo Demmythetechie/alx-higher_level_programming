@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     if type(js) == dict and len(js) != 0:
         print('[{}] {}'.format(js.get("id"), js.get("name")))
-    else if type(js) != dict:
+    elif type(js) != dict:
         print("Not a valid JSON")
     else:
         print("No result")
